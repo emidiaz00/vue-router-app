@@ -25,8 +25,8 @@ export default {
     methods: {
         async getPokemon() {
             try {
-                const pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${this.id}`).then(r => r.json());
-                console.log(pokemon);
+                const baseUrl = 'https://pokeapi.co/api/v2/pokemon/'
+                const pokemon = await fetch(`${baseUrl}${this.id}`).then(r => r.json());
                 this.pokemon = pokemon
             } catch (error) {
                 this.$router.push('/')
