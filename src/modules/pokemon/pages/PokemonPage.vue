@@ -14,12 +14,11 @@ export default {
     },
     data() {
         return {
-            id: null
+            
         }
     },
     created() {
-        const { id } = this.$route.params
-        this.id = id
+        
     },
 }
 </script>
